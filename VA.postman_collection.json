@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "541c9b81-c6c9-41e0-899f-2863be0826ad",
+		"name": "VA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17516421"
+	},
+	"item": [
+		{
+			"name": "List Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/list/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"list",
+						"customer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Customer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/list/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"list",
+								"customer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Apr 2024 09:08:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"customerID\": \"CSM01\",\n            \"name\": \"Jhon\",\n            \"email\": \"Jhon@gmail.com\",\n            \"phone\": \"0812\"\n        },\n        {\n            \"customerID\": \"CSM02\",\n            \"name\": \"Rezza\",\n            \"email\": \"Rezza@gmail.com\",\n            \"phone\": \"0813\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List Promo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/list/promo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"list",
+						"promo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Promo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/list/promo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"list",
+								"promo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Apr 2024 09:21:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"promoID\": \"PRM01\",\n            \"promoName\": \"Promo Kartini\",\n            \"promoDiscont\": 10000\n        },\n        {\n            \"promoID\": \"PRM02\",\n            \"promoName\": \"Promo Mei\",\n            \"promoDiscont\": 25000\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "A.1 - Trx VA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerID\": \"CSM02\",\r\n    \"customerName\": \"Rezza\",\r\n    \"amount\": \"250000\",\r\n    \"promotID\": \"PRM02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A.1 - Trx VA",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerID\": \"CSM02\",\r\n    \"customerName\": \"Rezza\",\r\n    \"amount\": \"250000\",\r\n    \"promotID\": \"PRM02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1001/transaction/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"transaction",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Apr 2024 09:24:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"virtualAccountNo\": \"485995976135\",\n        \"bankName\": \"BCA\",\n        \"amount\": \"225000\",\n        \"exDate\": \"2024-04-30T09:24:18.635+00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "A.2 - List Trx VA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/transaction/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"transaction",
+						"report"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A.2 - List Trx VA",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/transaction/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"transaction",
+								"report"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Apr 2024 09:24:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"transactionID\": 1,\n            \"virtualAccountID\": 1,\n            \"promoID\": \"PRM02\",\n            \"amount\": 225000,\n            \"timestamp\": \"2024-04-30T09:24:18.764+00:00\",\n            \"status\": \"Pending\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "B.1 - Payment VA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"virtualAccountNo\": \"485995976135\",\r\n    \"amount\": \"225000\",\r\n    \"paymentDate\": \"2024-04-30T06:30:52.584+00:00\",\r\n    \"remark\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/payment/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"payment",
+						"confirm"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "B.1 - Payment VA",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"virtualAccountNo\": \"485995976135\",\r\n    \"amount\": \"225000\",\r\n    \"paymentDate\": \"2024-04-30T06:30:52.584+00:00\",\r\n    \"remark\": \"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1001/payment/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"payment",
+								"confirm"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Apr 2024 09:25:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"virtualAccountNo\": \"485995976135\",\n        \"bankName\": \"BCA\",\n        \"amount\": \"225000\",\n        \"paymentDate\": \"2024-04-30T06:30:52.584+00:00\",\n        \"remark\": \"Test\",\n        \"refereceNo\": \"4d4a15767845\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "B.2 - List Payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/payment/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"payment",
+						"report"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "B.2 - List Payment",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/payment/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"payment",
+								"report"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Apr 2024 09:25:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"paymentID\": 1,\n            \"refereceNo\": \"4d4a15767845\",\n            \"transactionID\": 1,\n            \"metodeType\": \"VA\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

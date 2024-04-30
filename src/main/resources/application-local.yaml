@@ -1,0 +1,20 @@
+server:
+  port: 1001
+
+spring:
+  application:
+    name: mirae
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  datasource.url: jdbc:h2:file:./data/fileDb
+  datasource.driver-class-name: org.h2.Driver
+  datasource.username: sa
+  datasource.password: password
+  jpa.database-platform: org.hibernate.dialect.H2Dialect
+  jpa.show-sql: true
+  jpa.hibernate.ddl-auto: create
+#   jpa.hibernate.ddl-auto: validate
